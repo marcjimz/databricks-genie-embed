@@ -1,6 +1,6 @@
 # Genie Embed
 
-Local Dash app that embeds a Databricks AI/BI Genie Space with Intermountain Health branding.
+Local Dash app that embeds a Databricks AI/BI Genie Space.
 
 **Workspace:** `https://adb-7405616034846735.15.azuredatabricks.net`
 
