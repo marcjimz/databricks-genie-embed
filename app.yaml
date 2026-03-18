@@ -1,0 +1,9 @@
+command:
+  - "python"
+  - "app.py"
+
+env:
+  - name: "DATABRICKS_HOST"
+    valueFrom: "databricks-host"
+  - name: "GENIE_APP_URL"
+    valueFrom: "genie-app-url"

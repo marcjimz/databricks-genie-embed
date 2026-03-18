@@ -1,0 +1,237 @@
+/* ─── Reset ─── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ─── App Shell ─── */
+.app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    color: #110057;
+    background: #f5f5f6;
+}
+
+/* ─── Header — matches intermountainhealthcare.org ─── */
+.app-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 72px;
+    width: 100%;
+}
+
+/* Brand — logo includes wordmark */
+.header-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ih-logo {
+    height: 44px;
+    width: auto;
+}
+
+/* Controls */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Vertical divider between badge and dropdown */
+.header-divider {
+    width: 1px;
+    height: 28px;
+    background: #e5e5e5;
+}
+
+/* Auth badge */
+.auth-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px 6px 10px;
+    border-radius: 20px;
+    background: #f5f5f6;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+    white-space: nowrap;
+    color: #575758;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-dot.connected {
+    background: #22c55e;
+    box-shadow: 0 0 4px rgba(34, 197, 94, 0.4);
+}
+
+.status-dot.disconnected {
+    background: #ef4444;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.4);
+}
+
+.status-label {
+    color: #575758;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Dropdown */
+.dropdown-wrapper {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    min-width: 280px;
+}
+
+/* Refresh */
+.refresh-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #110057;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, border-color 0.15s;
+    line-height: 1;
+}
+
+.refresh-btn:hover {
+    background: #f5f5f6;
+    border-color: #ccc;
+}
+
+/* ─── Main Content ─── */
+.app-main {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.genie-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff;
+}
+
+/* ─── Empty State ─── */
+.empty-state {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    color: #575758;
+    padding: 24px;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff4d6a 0%, #4a00e2 100%);
+    opacity: 0.12;
+    margin-bottom: 8px;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #110057;
+}
+
+.empty-state p {
+    font-size: 14px;
+    max-width: 420px;
+    line-height: 1.6;
+}
+
+.workspace-link {
+    margin-top: 4px;
+    color: #4a00e2;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.workspace-link:hover {
+    text-decoration: underline;
+}
+
+/* ─── Footer ─── */
+.app-footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #575758;
+    flex-shrink: 0;
+}
+
+.app-footer strong {
+    color: #4a00e2;
+}
+
+.footer-dim {
+    opacity: 0.5;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .header-inner {
+        padding: 0 16px;
+        height: 60px;
+        gap: 8px;
+    }
+
+    .ih-logo {
+        height: 32px;
+    }
+
+    .auth-badge {
+        display: none;
+    }
+
+    .header-divider {
+        display: none;
+    }
+
+    .dropdown-wrapper {
+        min-width: 160px;
+    }
+}

@@ -1,0 +1,13 @@
+# Genie Spaces available in the dropdown.
+#
+# Find the Space ID in the Genie Room URL:
+#   https://adb-7405616034846735.15.azuredatabricks.net/explore/genie/<SPACE_ID>
+#
+# The app also attempts auto-discovery from the workspace API,
+# so this file is optional if the API returns your spaces.
+
+genie_spaces:
+  - id: "YOUR_SPACE_ID_HERE"
+    name: "My Genie Space"
+  # - id: "01f02a31663e19b0a18f1a2ed7a435a7"
+  #   name: "Supply Chain Analytics"

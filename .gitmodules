@@ -1,0 +1,3 @@
+[submodule "genie_space"]
+	path = genie_space
+	url = https://github.com/marcjimz/genie_space.git
