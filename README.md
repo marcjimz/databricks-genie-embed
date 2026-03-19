@@ -10,7 +10,7 @@ Local Dash app that embeds a Databricks AI/BI Genie Space via iframe, pointed at
 
 The deployed Genie app (`genie_space/`) uses two authorization modes:
 
-### Service Principal (SP)
+### Service Principal (SP) 
 
 Used for APIs whose required OAuth scopes are **not available** to Databricks Apps OBO tokens.
 
